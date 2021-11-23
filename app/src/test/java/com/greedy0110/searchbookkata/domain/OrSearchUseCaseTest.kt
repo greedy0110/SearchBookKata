@@ -24,7 +24,7 @@ class OrSearchUseCaseTest {
         val actualResult = keyword1Result.plus(keyword2Result).distinctBy { it.title }
 
         val orSearchUseCase = OrSearchUseCase(itBookSource)
-        val result = orSearchUseCase.execute(keyword1, keyword2).test().values().first()
+        val result = orSearchUseCase.execute(keyword1, keyword2, 1).test().values().first()
 
         //TODO: how can I be sure that the result is okay?
         assertThat(result).hasSize(20)
@@ -35,7 +35,7 @@ class OrSearchUseCaseTest {
     fun testSearchFail() {
         val orSearchUseCase = OrSearchUseCase(itBookSource)
         val errorKeyword = "error"
-        orSearchUseCase.execute(errorKeyword, "java").test()
+        orSearchUseCase.execute(errorKeyword, "java", 1).test()
             .assertError(SearchFailException::class.java)
             .dispose()
     }
