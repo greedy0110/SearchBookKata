@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -9,7 +11,7 @@ android {
     defaultConfig {
         applicationId "com.greedy0110.searchbookkata"
         minSdk 21
-        targetSdk 31
+        targetSdk 30
         versionCode 1
         versionName "1.0"
 
@@ -29,6 +31,11 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
 }
 
 dependencies {
@@ -46,7 +53,20 @@ dependencies {
     implementation "io.reactivex.rxjava3:rxkotlin:3.0.1"
     implementation 'com.squareup.moshi:moshi:1.12.0'
     implementation 'com.squareup.moshi:moshi-kotlin:1.12.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+    implementation "com.squareup.retrofit2:adapter-rxjava3:2.9.0"
+    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.9.2"))
+    implementation("com.squareup.okhttp3:okhttp")
+    implementation("com.squareup.okhttp3:logging-interceptor")
+    testImplementation 'com.squareup.okhttp3:mockwebserver'
+    implementation "com.google.dagger:hilt-android:2.40"
+    kapt "com.google.dagger:hilt-compiler:2.40"
+    testImplementation 'com.google.dagger:hilt-android-testing:2.40'
+    kaptTest 'com.google.dagger:hilt-android-compiler:2.40'
 
     testImplementation 'com.google.truth:truth:1.1.2'
     testImplementation 'org.mockito:mockito-core:3.3.3'
+    testImplementation 'androidx.test:runner:1.4.0'
+    testImplementation 'org.robolectric:robolectric:4.6.1'
 }
