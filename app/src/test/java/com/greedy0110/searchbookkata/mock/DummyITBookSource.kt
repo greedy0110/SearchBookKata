@@ -6,6 +6,11 @@ import io.reactivex.rxjava3.core.Single
 
 class DummyITBookSource : ITBookSource {
     override fun getByKeyword(keyword: String, page: Int): Single<List<ITBook>> {
-        return Single.just(DummyITBooks.page1)
+        val list = when (keyword) {
+            "java" -> DummyITBooks.javaPage1
+            "kotlin" -> DummyITBooks.kotlinPage1
+            else -> throw UnsupportedOperationException("unsupported keyword in this test.")
+        }
+        return Single.just(list)
     }
 }

@@ -13,12 +13,18 @@ object DummyITBooks {
         .add(KotlinJsonAdapterFactory())
         .build()
 
-    val page1: List<ITBook> by lazy {
-        val page1FileName =
-            "src/test/java/com/greedy0110/searchbookkata/mock/java_books_result.json"
-        val rawPage1 = File(page1FileName).source().buffer()
+    val javaPage1: List<ITBook> by lazy {
+        getBooksFromFileName("src/test/java/com/greedy0110/searchbookkata/mock/java_books_result.json")
+    }
+
+    val kotlinPage1: List<ITBook> by lazy {
+        getBooksFromFileName("src/test/java/com/greedy0110/searchbookkata/mock/kotlin_books_result.json")
+    }
+
+    private fun getBooksFromFileName(filename: String): List<ITBook> {
+        val rawBuffer = File(filename).source().buffer()
         val itBooksJsonAdapter = moshi.adapter(JsonWrapObject::class.java)
-        itBooksJsonAdapter.fromJson(rawPage1)
+        return itBooksJsonAdapter.fromJson(rawBuffer)
             ?.books
             ?.map { it.toITBook() }
             .orEmpty()

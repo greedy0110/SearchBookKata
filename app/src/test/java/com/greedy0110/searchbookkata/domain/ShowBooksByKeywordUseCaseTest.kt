@@ -19,7 +19,7 @@ class ShowBooksByKeywordUseCaseTest {
         val showUseCase = ShowBooksByKeywordUseCase(itBookSource)
         val result = showUseCase.execute("java", 1)
         result.test()
-            .assertValue(DummyITBooks.page1)
+            .assertValue(DummyITBooks.javaPage1)
             .dispose()
     }
 }
