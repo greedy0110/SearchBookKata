@@ -30,4 +30,13 @@ class OrSearchUseCaseTest {
         assertThat(result).hasSize(20)
         assertThat(result).isEqualTo(actualResult)
     }
+
+    @Test
+    fun testSearchFail() {
+        val orSearchUseCase = OrSearchUseCase(itBookSource)
+        val errorKeyword = "error"
+        orSearchUseCase.execute(errorKeyword, "java").test()
+            .assertError(SearchFailException::class.java)
+            .dispose()
+    }
 }

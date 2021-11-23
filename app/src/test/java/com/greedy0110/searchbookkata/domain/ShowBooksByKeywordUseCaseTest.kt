@@ -22,4 +22,13 @@ class ShowBooksByKeywordUseCaseTest {
             .assertValue(DummyITBooks.javaPage1)
             .dispose()
     }
+
+    @Test
+    fun testSearchFail() {
+        val showUseCase = ShowBooksByKeywordUseCase(itBookSource)
+        val errorKeyword = "error"
+        showUseCase.execute(errorKeyword, 1).test()
+            .assertError(SearchFailException::class.java)
+            .dispose()
+    }
 }

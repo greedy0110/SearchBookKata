@@ -49,4 +49,14 @@ class NotSearchUseCaseTest {
 
         assertThat(result).hasSize(4)
     }
+
+    @Test
+    fun testSearchFail() {
+        val errorKeyword = "error"
+        val keyword2 = "java"
+        val notUseCase = NotSearchUseCase(itBookSource)
+        notUseCase.execute(errorKeyword, keyword2, 1).test()
+            .assertError(SearchFailException::class.java)
+            .dispose()
+    }
 }
