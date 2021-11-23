@@ -44,44 +44,44 @@
       "url": "https://itbook.store/books/9780596527747"
     },
     {
-      "title": "Sams Teach Yourself Java in 24 Hours, 6th Edition",
-      "subtitle": "Covering Java 7 and Android",
-      "isbn13": "9780672335754",
-      "price": "$5.71",
-      "image": "https://itbook.store/img/books/9780672335754.png",
-      "url": "https://itbook.store/books/9780672335754"
+      "title": "Pro Android with Kotlin",
+      "subtitle": "Developing Modern Mobile Apps",
+      "isbn13": "9781484238196",
+      "price": "$34.30",
+      "image": "https://itbook.store/img/books/9781484238196.png",
+      "url": "https://itbook.store/books/9781484238196"
     },
     {
-      "title": "Sams Teach Yourself Java in 24 Hours, 8th Edition",
-      "subtitle": "Covering Java 9",
-      "isbn13": "9780672337949",
-      "price": "$17.79",
-      "image": "https://itbook.store/img/books/9780672337949.png",
-      "url": "https://itbook.store/books/9780672337949"
+      "title": "Learn Android Studio 3 with Kotlin",
+      "subtitle": "Efficient Android App Development",
+      "isbn13": "9781484239063",
+      "price": "$26.78",
+      "image": "https://itbook.store/img/books/9781484239063.png",
+      "url": "https://itbook.store/books/9781484239063"
     },
     {
-      "title": "Pro Java ME Apps",
-      "subtitle": "Building Commercial Quality Java ME Apps",
-      "isbn13": "9781430233275",
-      "price": "$36.22",
-      "image": "https://itbook.store/img/books/9781430233275.png",
-      "url": "https://itbook.store/books/9781430233275"
+      "title": "Kotlin Cookbook",
+      "subtitle": "A Problem-Focused Approach",
+      "isbn13": "9781492046677",
+      "price": "$34.99",
+      "image": "https://itbook.store/img/books/9781492046677.png",
+      "url": "https://itbook.store/books/9781492046677"
     },
     {
-      "title": "Expert Oracle and Java Security",
-      "subtitle": "Programming Secure Oracle Database Applications With Java",
-      "isbn13": "9781430238317",
-      "price": "$46.78",
-      "image": "https://itbook.store/img/books/9781430238317.png",
-      "url": "https://itbook.store/books/9781430238317"
+      "title": "Spring Boot: Up and Running",
+      "subtitle": "Building Cloud Native Java and Kotlin Applications",
+      "isbn13": "9781492076988",
+      "price": "$47.07",
+      "image": "https://itbook.store/img/books/9781492076988.png",
+      "url": "https://itbook.store/books/9781492076988"
     },
     {
-      "title": "JavaScript Creativity",
-      "subtitle": "Exploring the Modern Capabilities of JavaScript and HTML5",
-      "isbn13": "9781430259442",
-      "price": "$30.64",
-      "image": "https://itbook.store/img/books/9781430259442.png",
-      "url": "https://itbook.store/books/9781430259442"
+      "title": "Java to Kotlin",
+      "subtitle": "A Refactoring Guidebook",
+      "isbn13": "9781492082279",
+      "price": "$48.49",
+      "image": "https://itbook.store/img/books/9781492082279.png",
+      "url": "https://itbook.store/books/9781492082279"
     }
   ]
 }

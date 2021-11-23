@@ -21,6 +21,10 @@ object DummyITBooks {
         getBooksFromFileName("src/test/java/com/greedy0110/searchbookkata/mock/kotlin_books_result.json")
     }
 
+    val halfJavaPage1: List<ITBook> by lazy {
+        getBooksFromFileName("src/test/java/com/greedy0110/searchbookkata/mock/half_java_books_result.json")
+    }
+
     private fun getBooksFromFileName(filename: String): List<ITBook> {
         val rawBuffer = File(filename).source().buffer()
         val itBooksJsonAdapter = moshi.adapter(JsonWrapObject::class.java)
