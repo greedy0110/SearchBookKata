@@ -1,7 +1,7 @@
 package com.greedy0110.searchbookkata.presentation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.greedy0110.searchbookkata.R
 
 class MainActivity : AppCompatActivity() {
