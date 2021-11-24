@@ -4,4 +4,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="empty_books">There are no such books.</string>
     <string name="retry_books">Retry to load books</string>
+    <string name="thumbnail_book_image_description">a thumbnail image for the given book.</string>
 </resources>
