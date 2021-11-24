@@ -2,4 +2,6 @@
     <string name="app_name">SearchBookKata</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="empty_books">There are no such books.</string>
+    <string name="retry_books">Retry to load books</string>
 </resources>
