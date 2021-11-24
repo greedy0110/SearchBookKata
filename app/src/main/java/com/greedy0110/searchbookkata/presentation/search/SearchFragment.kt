@@ -5,13 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.greedy0110.searchbookkata.databinding.FragmentSearchBinding
+import com.greedy0110.searchbookkata.presentation.BookUiModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class SearchFragment : Fragment() {
 
     private val binding by lazy { FragmentSearchBinding.inflate(layoutInflater) }
+    private val bookAdapter = BookAdapter(
+        onClick = { model -> /* TODO: go to the detail fragment with the model. */ }
+    )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,7 +32,8 @@ class SearchFragment : Fragment() {
 
     private fun FragmentSearchBinding.initBooks() {
         layoutBooks.apply {
-            adapter
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = bookAdapter
         }
     }
 

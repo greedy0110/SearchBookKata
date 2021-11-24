@@ -20,7 +20,7 @@ class BookViewHolder(
     private val disposableBags = CompositeDisposable()
 
     fun onBind(model: BookUiModel) {
-        //TODO: this subscription should be subscribed at onBind()
+        //this subscription should be subscribed at onBind()
         //  and be disposed at onRecycled()
         binding.root.clicks()
             .toFlowable(BackpressureStrategy.LATEST)
@@ -30,10 +30,12 @@ class BookViewHolder(
         Glide.with(binding.root)
             .load(model.imageUrl)
             .override(56)
+            .fitCenter()
             .into(binding.thumbnailBookImage)
+
+        binding.titleText.text = model.title
     }
 
-    //TODO: where this function should be called?
     fun onRecycled() {
         disposableBags.clear()
     }
