@@ -1,6 +1,8 @@
 package com.greedy0110.searchbookkata.domain
 
 import com.google.common.truth.Truth.assertThat
+import com.greedy0110.searchbookkata.domain.usecase.OrSearchUseCase
+import com.greedy0110.searchbookkata.domain.usecase.ShowBooksByKeywordUseCase
 import com.greedy0110.searchbookkata.mock.DummyITBookSource
 import org.junit.Before
 import org.junit.Test

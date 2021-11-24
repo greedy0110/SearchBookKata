@@ -1,9 +1,12 @@
-package com.greedy0110.searchbookkata.domain
+package com.greedy0110.searchbookkata.domain.usecase
 
+import com.greedy0110.searchbookkata.domain.ITBook
+import com.greedy0110.searchbookkata.domain.ITBookSource
 import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.kotlin.Singles
+import javax.inject.Inject
 
-class OrSearchUseCase(private val itBookSource: ITBookSource) {
+class OrSearchUseCase @Inject constructor(private val itBookSource: ITBookSource) {
 
     fun execute(keyword1: String, keyword2: String, page: Int): Single<List<ITBook>> {
         //TODO: Since the result of keyword1 and keyword2 can be duplicated.

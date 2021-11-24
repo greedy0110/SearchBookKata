@@ -1,5 +1,6 @@
 package com.greedy0110.searchbookkata.domain
 
+import com.greedy0110.searchbookkata.domain.usecase.ShowBooksByKeywordUseCase
 import com.greedy0110.searchbookkata.mock.DummyITBookSource
 import com.greedy0110.searchbookkata.mock.DummyITBooks
 import org.junit.Before

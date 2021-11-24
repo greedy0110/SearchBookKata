@@ -1,5 +1,6 @@
-package com.greedy0110.searchbookkata.remote
+package com.greedy0110.searchbookkata.remote.di
 
+import com.greedy0110.searchbookkata.remote.ITBookService
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
